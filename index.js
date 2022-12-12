@@ -16,6 +16,9 @@ app.use('/equipment-type', require('./routes/equipmentType'));
 app.use('/equipment-state', require('./routes/equipmentState'));
 app.use('/inventory', require('./routes/inventory'));
 
+// MODULO DE AUTENTICACIÓN Y AUTORIZACIÓN
+app.use('/auth', require('./routes/auth'))
+
 app.listen(process.env.PORT, () => {
     console.log(`Servidor corriendo en el puerto ${process.env.PORT}`)
 });
